@@ -5,6 +5,16 @@ public class Engineer extends Profession {
     private String project;
     private String projectStatus;
 
+    public Engineer() {}
+
+    public Engineer(String name, String surname, String education, String birthday,
+                    int salary, String project, String projectStatus) {
+        super(name, surname, education, birthday);
+        this.salary = salary;
+        this.project = project;
+        this.projectStatus = projectStatus;
+    }
+
     public int workingHours(){
         return 0;
     }

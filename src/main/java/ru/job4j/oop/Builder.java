@@ -4,6 +4,13 @@ public class Builder extends Engineer {
     private String workShift;
     private int deadline;
 
+    public Builder(String name, String surname, String education, String birthday,
+                   int salary, String project, String projectStatus, String workShift, int deadline) {
+        super(name, surname, education, birthday, salary, project, projectStatus);
+        this.workShift = workShift;
+        this.deadline = deadline;
+    }
+
     public int estimate() {
         return 0;
     }

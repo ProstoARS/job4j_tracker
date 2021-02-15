@@ -6,6 +6,17 @@ public class Doctor extends Profession {
     private String receptionTime;
     private int salary;
 
+    public Doctor() {}
+
+    public Doctor(String name, String surname, String education, String birthday, Pacient pacient,
+                  String journal, String receptionTime, int salary) {
+        super(name, surname, education, birthday);
+        this.pacient = pacient;
+        this.journal = journal;
+        this.receptionTime = receptionTime;
+        this.salary = salary;
+    }
+
     public boolean inspection(Pacient pacient){
         return false;
     }
