@@ -34,8 +34,23 @@ public class TrackerTest {
         Tracker tracker = new Tracker();
         Item bug = new Item();
         bug.setName("Bug");
+        Item bog = new Item();
+        bog.setName("Bog");
+        Item big = new Item();
+        big.setName("Big");
+        Item lag = new Item();
+        lag.setName("lag");
+        Item lox = new Item();
+        lox.setName("lox");
+        Item lom = new Item();
+        lom.setName("lom");
         tracker.add(bug);
-        int id = bug.getId();
+        tracker.add(bog);
+        tracker.add(big);
+        tracker.add(lag);
+        tracker.add(lox);
+        tracker.add(lom);
+        int id = bog.getId();
         tracker.delete(id);
         assertThat(tracker.findById(id), is(nullValue()));
     }
