@@ -18,14 +18,14 @@ public class Tracker {
         return index != -1 ? items[index] : null;
     }
 
-    public Item[] findAll(Item[] items) {
-        return Arrays.copyOf(items, size);
+    public Item[] findAll() {
+        return Arrays.copyOf(this.items, size);
     }
 
     public Item[] findByName(String key) {
         Item[] copy = new Item[items.length];
         int size = 0;
-        for (int i = 0; i < items.length; i++) {
+        for (int i = 0; i < this.size; i++) {
             if (items[i].getName().equals(key)) {
                 copy[size] = items[i];
                 size++;
@@ -52,6 +52,9 @@ public class Tracker {
             int oldId = items[index].getId();
             item.setId(oldId);
             items[index] = item;
+            System.out.println("The replacement was successful");
+        } else {
+            System.out.println("The replacement failed");
         }
         return items;
     }
