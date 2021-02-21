@@ -52,9 +52,6 @@ public class Tracker {
             int oldId = items[index].getId();
             item.setId(oldId);
             items[index] = item;
-            System.out.println("The replacement was successful");
-        } else {
-            System.out.println("The replacement failed");
         }
         return items;
     }
