@@ -33,7 +33,6 @@ public class StartUI {
                         String name = scanner.nextLine();
                         Item item = new Item(name);
                         tracker.replace(id, item);
-                        System.out.println("The replacement was successful");
                         exeption = !tracker.findById(id).equals(item);
                     } else {
                         System.out.println("id does not exist");
