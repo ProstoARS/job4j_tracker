@@ -6,6 +6,7 @@ public class FindItemsName implements UserAction {
     public FindItemsName(Output out) {
         this.out = out;
     }
+
     @Override
     public String name() {
         return "Find item by name";
@@ -18,10 +19,10 @@ public class FindItemsName implements UserAction {
         Item[] item = tracker.findByName(name);
         if (item.length > 0) {
             for (Item value : item) {
-                System.out.println(value);
+                out.println(value);
             }
         } else {
-            System.out.println("name does not exist");
+            out.println("name does not exist");
         }
         return true;
     }

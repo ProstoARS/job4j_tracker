@@ -18,9 +18,9 @@ public class EditItems implements UserAction {
         String name = input.askStr("Enter name a new Item: ");
         Item item = new Item(name);
         if (tracker.replace(id, item)) {
-            System.out.println("The replacement was successful");
+            out.println("The replacement was successful");
         } else {
-            System.out.println("id does not exist");
+            out.println("id does not exist");
         }
         return true;
     }

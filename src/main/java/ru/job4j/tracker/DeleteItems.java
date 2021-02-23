@@ -16,9 +16,9 @@ public class DeleteItems implements UserAction {
         out.println("==== Delete item ====");
         int id = input.askInt("Enter id for delete: ");
         if (tracker.delete(id)) {
-            System.out.println("File deleted");
+            out.println("File deleted");
         } else {
-            System.out.println("id does not exist");
+            out.println("id does not exist");
         }
         return true;
     }
