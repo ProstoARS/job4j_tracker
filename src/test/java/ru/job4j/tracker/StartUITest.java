@@ -86,10 +86,10 @@ public class StartUITest {
         Input in = new StubInput(new String[]{"0", "1"});
         UserAction[] actions = {new ShowItems(out), new Exit(out)};
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findById(item1.getId()).getName() +
+        assertThat(tracker.findById(item1.getId()).toString() +
                 System.lineSeparator() +
-                tracker.findById(item2.getId()).getName(), is("new Item1" +
-                System.lineSeparator() + "new Item2"));
+                tracker.findById(item2.getId()).toString(), is(item1.toString() +
+                System.lineSeparator() + item2.toString()));
     }
 
     @Test
@@ -101,7 +101,7 @@ public class StartUITest {
         Input in = new StubInput(new String[]{"0", String.valueOf(item.getId()), "1"});
         UserAction[] actions = {new FindItemsId(out), new Exit(out)};
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findById(item.getId()).getName(), is("new Item"));
+        assertThat(tracker.findById(item.getId()).toString(), is(item.toString()));
     }
 
     @Test
@@ -114,9 +114,9 @@ public class StartUITest {
         Input in = new StubInput(new String[] {"0", "same item", "1"});
         UserAction[] actions = {new FindItemsName(out), new Exit(out)};
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findById(item1.getId()).getName() +
-                System.lineSeparator() + tracker.findById(item3.getId()).getName(),
-                is("same item" + System.lineSeparator() + "same item"));
+        assertThat(tracker.findById(item1.getId()).toString() +
+                System.lineSeparator() + tracker.findById(item3.getId()).toString(),
+                is(item1.toString() + System.lineSeparator() + item3.toString()));
 
     }
 }
