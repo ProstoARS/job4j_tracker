@@ -7,6 +7,7 @@ public class FactTest extends TestCase {
 
     @Test(expected = IllegalArgumentException.class)
     public void testCalc() {
+
         Fact fact = new Fact();
         fact.calc(-3);
     }
