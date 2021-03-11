@@ -91,7 +91,7 @@ public class StartUITest {
         List<UserAction> actions = Arrays.asList(new ShowItems(out), new Exit(out));
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
-        assertThat(out.toString(), is(is("Menu." + ln
+        assertThat(out.toString(), is("Menu." + ln
                 + "0. Show all items" + ln
                 + "1. Exit Program" + ln
                 + "==== Show all items ====" + ln
@@ -101,7 +101,7 @@ public class StartUITest {
                 + "0. Show all items" + ln
                 + "1. Exit Program" + ln
                 + "==== Exit Program ====" + ln
-        )));
+        ));
     }
 
     @Test
@@ -138,7 +138,7 @@ public class StartUITest {
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(out.toString(),
-                is(is("Menu." + ln
+                is("Menu." + ln
                         + "0. Find item by name" + ln
                         + "1. Exit Program" + ln
                         + "==== Find item by name ====" + ln
@@ -148,7 +148,7 @@ public class StartUITest {
                         + "0. Find item by name" + ln
                         + "1. Exit Program" + ln
                         + "==== Exit Program ====" + ln
-                )));
+                ));
 
     }
 
