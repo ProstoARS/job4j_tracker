@@ -11,12 +11,11 @@ public class UniqueText {
         for (String str : origin) {
             check.add(str);
         }
-        int count = 0;
         for (String str : text) {
-            if (check.contains(str)) {
-                count++;
+            if (!check.contains(str)) {
+                return false;
             }
         }
-        return rsl = count > 3;
+        return rsl;
     }
 }
